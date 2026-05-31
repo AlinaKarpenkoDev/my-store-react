@@ -3,11 +3,9 @@ import { createContext, useState, useEffect } from "react";
 export const LanguageContext = createContext();
 
 export default function LanguageProvider({ children }) {
-  // Розумне отримання: якщо знаходимо старі збереження з лапками,
-  // метод .replace(/"/g, "") автоматично їх вирізає!
   const [language, setLanguage] = useState(() => {
-    const saved = localStorage.getItem("language");
-    return saved ? saved.replace(/"/g, "") : "ua";
+    const saved = localStorage.getItem("language") || "";
+    return saved.toLowerCase().includes("en") ? "en" : "ua";
   });
 
   const toggleLanguage = () => {
