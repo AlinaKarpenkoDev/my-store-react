@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 flex flex-col dark:bg-zinc-900 dark:text-zinc-100">
+      <div className="min-h-[100dvh] w-full bg-zinc-50 font-sans text-zinc-900 flex flex-col dark:bg-zinc-900 dark:text-zinc-100 transition-colors">
         <Header />
         <Toaster />
         <main className="flex-grow">

@@ -14,8 +14,8 @@ export default function Header() {
   const t = dict[language] || dict["ua"];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 dark:bg-zinc-700 dark:border-zinc-700 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <header className="bg-white shadow-sm sticky top-0 left-0 w-full z-50 dark:bg-zinc-800 dark:border-zinc-700 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
         <Link
           to="/"
           className="text-2xl font-black text-zinc-900 dark:text-white tracking-tight hover:scale-105 transition-transform"
@@ -23,7 +23,7 @@ export default function Header() {
           My Store
         </Link>
 
-        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-3 sm:gap-6 items-center text-sm sm:text-base w-full md:w-auto">
+        <nav className="flex flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-6 items-center text-xs sm:text-base w-full md:w-auto">
           <Link
             to="/"
             className="text-zinc-600 dark:text-zinc-300 font-medium hover:text-zinc-700 dark:hover:text-zinc-400 transition-colors"
