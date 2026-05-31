@@ -58,7 +58,6 @@ export default function Orders() {
                 {order.items.map((item, index) => (
                   <div
                     key={index}
-                    // ОСЬ ФІКС ФОНУ: bg-white dark:bg-zinc-200 замість темного
                     className="h-20 w-20 sm:h-24 sm:w-24 bg-white dark:bg-zinc-200 rounded-xl p-2 flex items-center justify-center border border-zinc-200 dark:border-zinc-500 relative group cursor-pointer"
                     title={item.title}
                   >

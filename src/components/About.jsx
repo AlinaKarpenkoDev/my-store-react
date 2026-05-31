@@ -9,7 +9,6 @@ export default function About() {
   const t = dict[language] || dict["ua"];
 
   const toggleFaq = (index) => {
-    // Якщо клікаємо на те ж саме питання - закриваємо, інакше - відкриваємо нове
     setOpenId(openId === index ? null : index);
   };
 
@@ -20,7 +19,6 @@ export default function About() {
       </h1>
 
       <div className="flex flex-col gap-8">
-        {/* Секція: Про нас */}
         <section className="bg-white dark:bg-zinc-800 p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-700 transition-colors hover:shadow-md">
           <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-4 flex items-center gap-2">
             <span>👋</span> {t.aboutSection}
@@ -29,8 +27,6 @@ export default function About() {
             {t.aboutDesc}
           </p>
         </section>
-
-        {/* Секція: Контакти */}
         <section className="bg-white dark:bg-zinc-800 p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-700 transition-colors hover:shadow-md">
           <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-4 flex items-center gap-2">
             <span>📞</span> {t.contactsSection}
@@ -48,7 +44,6 @@ export default function About() {
           </ul>
         </section>
 
-        {/* Секція: Умови використання */}
         <section className="bg-white dark:bg-zinc-800 p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-700 transition-colors hover:shadow-md">
           <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-4 flex items-center gap-2">
             <span>📜</span> {t.termsSection}
@@ -58,14 +53,12 @@ export default function About() {
           </p>
         </section>
 
-        {/* Секція: FAQ Акордеон */}
         <section className="mt-8 border-t border-zinc-200 dark:border-zinc-700 pt-10">
           <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-6 text-center transition-colors">
             {t.faqTitle}
           </h2>
 
           <div className="flex flex-col gap-4">
-            {/* Перебираємо масив питань прямо зі словника */}
             {t.faqs.map((item, index) => {
               const isOpen = openId === index;
 
